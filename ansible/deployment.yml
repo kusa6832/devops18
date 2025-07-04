@@ -5,7 +5,7 @@
   user: ec2-user
 
   vars:
-    ansible_ssh_private_key_file: "/etc/ansible/mustafakey-pair.pem"
+    ansible_ssh_private_key_file: "/etc/ansible/my-key.pem"
     ansible_ssh_user: "ec2-user"
 
   tasks:
@@ -26,7 +26,7 @@
 
     - name: get the source code from github
       git:
-        repo: "https://github.com/devops0014/staticsite-docker.git"
+        repo: "https://github.com/kusa6832/staticsite-docker.git"
         dest: /var/www/
         update: yes
         version: master
